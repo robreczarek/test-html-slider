@@ -18,7 +18,7 @@ npm run lint
 
 ## Demo
 A working version of the app can be viewed here:
-https://robreczarek.github.io/test-html-slider/
+https://robreczarek.github.io/test-html-slider/app/
 
 ## TODO
 * [ ] Set up a rough draft of the slider
