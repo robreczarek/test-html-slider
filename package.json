@@ -1,0 +1,20 @@
+{
+    "name": "test-html-slider",
+    "version": "1.0.0",
+    "description": "Self-Study: Building an image slider from scratch.",
+    "author": "Robert Obreczarek",
+    "license": "GPL-3.0",
+    "scripts": {
+        "lint": "eslint ./app/scripts/**",
+        "test": "jasmine JASMINE_CONFIG_PATH=test/unit/jasmine.json"
+    },
+    "devDependencies": {
+        "eslint": "^3.8.1",
+        "jasmine": "^2.5.2",
+        "jasmine-core": "^2.5.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/robreczarek/test-html-slider.git"
+    }
+}
