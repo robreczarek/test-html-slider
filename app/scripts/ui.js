@@ -17,11 +17,11 @@
         var $opPlay = document.querySelector('#ui-play');
         //UI operator click handlers
         $opPrevious.addEventListener('click', function () {
-
+            $img.src = slider.previous();
         });
 
         $opNext.addEventListener('click', function () {
-
+            $img.src = slider.next();
         });
 
         $opStop.addEventListener('click', function () {
