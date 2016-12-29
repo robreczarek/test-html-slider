@@ -13,29 +13,44 @@
         var $opPrevious = document.querySelector('#ui-previous');
         var $opNext = document.querySelector('#ui-next');
         var $opStop = document.querySelector('#ui-stop');
-        var $opPause = document.querySelector('#ui-pause');
         var $opPlay = document.querySelector('#ui-play');
+        var intervalID;
+
         //UI operator click handlers
         $opPrevious.addEventListener('click', function () {
-            $img.src = slider.previous();
+
+            updateImage(slider.previous());
+
         });
 
         $opNext.addEventListener('click', function () {
-            $img.src = slider.next();
+
+            updateImage(slider.next());
+
         });
 
         $opStop.addEventListener('click', function () {
 
-        });
-
-        $opPause.addEventListener('click', function () {
+            if (self.intervalID) {
+                self.intervalID = root.clearInterval(self.intervalID);
+            }
 
         });
 
         $opPlay.addEventListener('click', function () {
 
+            if (!self.intervalID) {
+                self.intervalID = root.setInterval(updateImage, 2000);
+            }
+
         });
 
+        // UI Manipulation methods
+        var updateImage = function() {
+
+            $img.src = slider.next();
+
+        }
     };
 
     root.UI = UI;

@@ -7,14 +7,13 @@
     function Slider() {
 
         var images = [];
-        var debug = false;
         var index = 0;
         var path = 'images/';
         var playback = false;
+        var interval;
 
         var setImages = function (arrImages) {
             images = arrImages;
-            printDebug();
         };
 
         var imageCount = function() {
@@ -45,37 +44,10 @@
 
         };
 
-        var pause = function () {
-
-        };
-
-        var stop = function () {
-
-        };
-
-        var play = function () {
-
-        };
-
-        var printDebug = function () {
-
-            if (debug) {
-                console.log('---------------------------');
-                console.log('images' + images);
-                console.log('---------------------------');
-            }
-
-        };
-
         return {
             previous: previous,
             next: next,
-            stop: stop,
-            pause: pause,
-            play: play,
             images: images,
-            debug: debug,
-            printDebug: printDebug,
             setImages: setImages,
             imageCount: imageCount
         }

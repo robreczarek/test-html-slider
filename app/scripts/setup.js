@@ -3,10 +3,8 @@
 
     function bootstrap() {
 
-        var slider = root.Slider();
-        //set to true if you wish to follow values in the console
-        slider.debug = true;
-        slider.setImages([
+        var libslider = root.Slider();
+        libslider.setImages([
             '001.jpg',
             '002.jpg',
             '003.jpg',
@@ -17,9 +15,7 @@
         ]);
 
         var ui = new root.UI();
-        ui.setup(slider);
-
-        slider.play();
+        ui.setup(libslider);
     }
 
     root.addEventListener('load', bootstrap);
